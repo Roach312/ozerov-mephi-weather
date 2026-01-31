@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: "weather"
+
+logging:
+  level:
+    root: ${ROOT_LOGGING_LEVEL:INFO}
+    org.springframework: ${SPRING_LOGGING_LEVEL:INFO}
+
+yandex:
+  weather:
+    base-url: ${YANDEX_BASE_URL:https://api.weather.yandex.ru}
+    path-url: ${YANDEX_PATH_URL:/v2/forecast}
+    weather-key: ${YANDEX_WEATHER_KEY:4d4c97df-57c8-40e2-85b2-a3593d894476}
