@@ -23,12 +23,12 @@ public class WeatherProxyProxyController {
         return ResponseEntity.ok(weatherProxyService.weatherFullInfo(latitude, longitude));
     }
 
-    @GetMapping(value = "/fact-temp", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/fact-temp")
     public ResponseEntity<Integer> getWeatherFactTemp(@RequestParam("lat") BigDecimal latitude, @RequestParam("lon") BigDecimal longitude) {
         return ResponseEntity.ok(weatherProxyService.weatherFactTemp(latitude, longitude));
     }
 
-    @GetMapping(value = "/avg-temp", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/avg-temp")
     public ResponseEntity<BigDecimal> getWeatherAverageTemp(@RequestParam("lat") BigDecimal latitude, @RequestParam("lon") BigDecimal longitude, @RequestParam("limit") Integer limit) {
         return ResponseEntity.ok(weatherProxyService.weatherAvgTemp(latitude, longitude, limit));
     }
